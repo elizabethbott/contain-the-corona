@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F51A708124904181009C9481 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F51A708024904181009C9481 /* backgroundMusic.mp3 */; };
+		F51A70832491540C009C9481 /* button1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F51A70822491540C009C9481 /* button1.wav */; };
+		F5389D61247712CA0008627E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5389D60247712CA0008627E /* AppDelegate.swift */; };
+		F5389D63247712CA0008627E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5389D62247712CA0008627E /* HomeViewController.swift */; };
+		F5389D66247712CA0008627E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5389D64247712CA0008627E /* Main.storyboard */; };
+		F5389D68247712CA0008627E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5389D67247712CA0008627E /* Assets.xcassets */; };
+		F5389D6B247712CA0008627E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5389D69247712CA0008627E /* LaunchScreen.storyboard */; };
+		F5389D76247712CB0008627E /* containTheCoronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5389D75247712CB0008627E /* containTheCoronaTests.swift */; };
+		F5389D81247720BD0008627E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5389D80247720BD0008627E /* GameViewController.swift */; };
+		F5389D8324774BB30008627E /* GridControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5389D8224774BB30008627E /* GridControl.swift */; };
+		F5C1A9B82493FD4D00D75F0A /* music.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A9B72493FD4D00D75F0A /* music.swift */; };
+		F5C1A9BA24940FB500D75F0A /* slowmotion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5C1A9B924940FB400D75F0A /* slowmotion.mp3 */; };
+		F5EFEB51247C3ADE00C863F5 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFEB50247C3ADE00C863F5 /* GamePlay.swift */; };
+		F5EFEB55247C517600C863F5 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFEB54247C517600C863F5 /* FinalViewController.swift */; };
+		F5EFEB572480659C00C863F5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EFEB562480659C00C863F5 /* TutorialViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5389D72247712CB0008627E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5389D55247712C90008627E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5389D5C247712C90008627E;
+			remoteInfo = containTheCorona;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F51A708024904181009C9481 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		F51A70822491540C009C9481 /* button1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button1.wav; sourceTree = "<group>"; };
+		F5389D5D247712C90008627E /* containTheCorona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = containTheCorona.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5389D60247712CA0008627E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5389D62247712CA0008627E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F5389D65247712CA0008627E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5389D67247712CA0008627E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5389D6A247712CA0008627E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5389D6C247712CA0008627E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5389D71247712CB0008627E /* containTheCoronaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = containTheCoronaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5389D75247712CB0008627E /* containTheCoronaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = containTheCoronaTests.swift; sourceTree = "<group>"; };
+		F5389D77247712CB0008627E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5389D80247720BD0008627E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F5389D8224774BB30008627E /* GridControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridControl.swift; sourceTree = "<group>"; };
+		F5C1A9B72493FD4D00D75F0A /* music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = music.swift; sourceTree = "<group>"; };
+		F5C1A9B924940FB400D75F0A /* slowmotion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slowmotion.mp3; sourceTree = "<group>"; };
+		F5EFEB50247C3ADE00C863F5 /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		F5EFEB54247C517600C863F5 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		F5EFEB562480659C00C863F5 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5389D5A247712C90008627E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5389D6E247712CB0008627E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5389D54247712C90008627E = {
+			isa = PBXGroup;
+			children = (
+				F5389D5F247712CA0008627E /* containTheCorona */,
+				F5389D74247712CB0008627E /* containTheCoronaTests */,
+				F5389D5E247712C90008627E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5389D5E247712C90008627E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5389D5D247712C90008627E /* containTheCorona.app */,
+				F5389D71247712CB0008627E /* containTheCoronaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5389D5F247712CA0008627E /* containTheCorona */ = {
+			isa = PBXGroup;
+			children = (
+				F5389D60247712CA0008627E /* AppDelegate.swift */,
+				F5389D62247712CA0008627E /* HomeViewController.swift */,
+				F5EFEB562480659C00C863F5 /* TutorialViewController.swift */,
+				F5389D80247720BD0008627E /* GameViewController.swift */,
+				F5EFEB54247C517600C863F5 /* FinalViewController.swift */,
+				F5EFEB50247C3ADE00C863F5 /* GamePlay.swift */,
+				F5C1A9B72493FD4D00D75F0A /* music.swift */,
+				F5389D64247712CA0008627E /* Main.storyboard */,
+				F5389D69247712CA0008627E /* LaunchScreen.storyboard */,
+				F5389D67247712CA0008627E /* Assets.xcassets */,
+				F5389D8224774BB30008627E /* GridControl.swift */,
+				F5389D6C247712CA0008627E /* Info.plist */,
+				F51A708024904181009C9481 /* backgroundMusic.mp3 */,
+				F51A70822491540C009C9481 /* button1.wav */,
+				F5C1A9B924940FB400D75F0A /* slowmotion.mp3 */,
+			);
+			path = containTheCorona;
+			sourceTree = "<group>";
+		};
+		F5389D74247712CB0008627E /* containTheCoronaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5389D75247712CB0008627E /* containTheCoronaTests.swift */,
+				F5389D77247712CB0008627E /* Info.plist */,
+			);
+			path = containTheCoronaTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5389D5C247712C90008627E /* containTheCorona */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5389D7A247712CB0008627E /* Build configuration list for PBXNativeTarget "containTheCorona" */;
+			buildPhases = (
+				F5389D59247712C90008627E /* Sources */,
+				F5389D5A247712C90008627E /* Frameworks */,
+				F5389D5B247712C90008627E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = containTheCorona;
+			productName = containTheCorona;
+			productReference = F5389D5D247712C90008627E /* containTheCorona.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5389D70247712CB0008627E /* containTheCoronaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5389D7D247712CB0008627E /* Build configuration list for PBXNativeTarget "containTheCoronaTests" */;
+			buildPhases = (
+				F5389D6D247712CB0008627E /* Sources */,
+				F5389D6E247712CB0008627E /* Frameworks */,
+				F5389D6F247712CB0008627E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5389D73247712CB0008627E /* PBXTargetDependency */,
+			);
+			name = containTheCoronaTests;
+			productName = containTheCoronaTests;
+			productReference = F5389D71247712CB0008627E /* containTheCoronaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5389D55247712C90008627E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Elizabeth Bott";
+				TargetAttributes = {
+					F5389D5C247712C90008627E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					F5389D70247712CB0008627E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = F5389D5C247712C90008627E;
+					};
+				};
+			};
+			buildConfigurationList = F5389D58247712C90008627E /* Build configuration list for PBXProject "containTheCorona" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5389D54247712C90008627E;
+			productRefGroup = F5389D5E247712C90008627E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5389D5C247712C90008627E /* containTheCorona */,
+				F5389D70247712CB0008627E /* containTheCoronaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5389D5B247712C90008627E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5389D6B247712CA0008627E /* LaunchScreen.storyboard in Resources */,
+				F5C1A9BA24940FB500D75F0A /* slowmotion.mp3 in Resources */,
+				F51A70832491540C009C9481 /* button1.wav in Resources */,
+				F5389D68247712CA0008627E /* Assets.xcassets in Resources */,
+				F51A708124904181009C9481 /* backgroundMusic.mp3 in Resources */,
+				F5389D66247712CA0008627E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5389D6F247712CB0008627E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5389D59247712C90008627E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5EFEB51247C3ADE00C863F5 /* GamePlay.swift in Sources */,
+				F5EFEB572480659C00C863F5 /* TutorialViewController.swift in Sources */,
+				F5EFEB55247C517600C863F5 /* FinalViewController.swift in Sources */,
+				F5389D63247712CA0008627E /* HomeViewController.swift in Sources */,
+				F5389D81247720BD0008627E /* GameViewController.swift in Sources */,
+				F5389D61247712CA0008627E /* AppDelegate.swift in Sources */,
+				F5389D8324774BB30008627E /* GridControl.swift in Sources */,
+				F5C1A9B82493FD4D00D75F0A /* music.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5389D6D247712CB0008627E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5389D76247712CB0008627E /* containTheCoronaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5389D73247712CB0008627E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5389D5C247712C90008627E /* containTheCorona */;
+			targetProxy = F5389D72247712CB0008627E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5389D64247712CA0008627E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5389D65247712CA0008627E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5389D69247712CA0008627E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5389D6A247712CA0008627E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5389D78247712CB0008627E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5389D79247712CB0008627E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5389D7B247712CB0008627E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = containTheCorona/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = umich.containTheCorona;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5389D7C247712CB0008627E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = containTheCorona/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = umich.containTheCorona;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5389D7E247712CB0008627E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = containTheCoronaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = umich.containTheCoronaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/containTheCorona.app/containTheCorona";
+			};
+			name = Debug;
+		};
+		F5389D7F247712CB0008627E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = containTheCoronaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = umich.containTheCoronaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/containTheCorona.app/containTheCorona";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5389D58247712C90008627E /* Build configuration list for PBXProject "containTheCorona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5389D78247712CB0008627E /* Debug */,
+				F5389D79247712CB0008627E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5389D7A247712CB0008627E /* Build configuration list for PBXNativeTarget "containTheCorona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5389D7B247712CB0008627E /* Debug */,
+				F5389D7C247712CB0008627E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5389D7D247712CB0008627E /* Build configuration list for PBXNativeTarget "containTheCoronaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5389D7E247712CB0008627E /* Debug */,
+				F5389D7F247712CB0008627E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5389D55247712C90008627E /* Project object */;
+}
