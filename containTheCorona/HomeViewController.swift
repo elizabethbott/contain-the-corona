@@ -67,15 +67,7 @@ class HomeViewController: UIViewController {
         clickSoundButton.setImage(UIImage(named: "mute audio"), for: .selected)
         clickSoundButton.setImage(UIImage(named: "audio"), for: .normal)
         
-        if buttonSound{
-            clickSoundButton.isSelected = true
-        }
-        backgroundMusicButton.setImage(UIImage(named: "mute music"), for: .selected)
-        backgroundMusicButton.setImage(UIImage(named: "music"), for: .normal)
         
-        if musicOn{
-            backgroundMusicButton.isSelected = true
-        }
         
         
         //MusicPlayer.shared.startBackgroundMusic()
@@ -85,6 +77,16 @@ class HomeViewController: UIViewController {
             GSAudio.sharedInstance.stopBackgroundMusicMp3(soundFileName: "slowmotion")
             GSAudio.sharedInstance.playSoundMp3(soundFileName: "slowmotion")
             
+        }
+        
+        if buttonSound{
+            clickSoundButton.isSelected = true
+        }
+        backgroundMusicButton.setImage(UIImage(named: "mute music"), for: .selected)
+        backgroundMusicButton.setImage(UIImage(named: "music"), for: .normal)
+        
+        if musicOn{
+            backgroundMusicButton.isSelected = true
         }
         
         var temp = defaults.integer(forKey: "highscore")

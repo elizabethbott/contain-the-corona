@@ -224,7 +224,7 @@ class GamePlay{
             if isValid(row: tempRow - 1, col: tempCol + colWest){
                 var past = false
                 for (_, x) in listOfPast.enumerated(){
-                    if x.row == tempRow && x.col == tempCol{
+                    if x.row == tempRow - 1 && x.col == tempCol + colWest{
                         past = true
                         break
                     }
@@ -245,7 +245,7 @@ class GamePlay{
             if isValid(row: tempRow - 1, col: tempCol + colEast){
                 var past = false
                 for (_, x) in listOfPast.enumerated(){
-                    if x.row == tempRow - 1 && x.col == tempCol + 1{
+                    if x.row == tempRow - 1 && x.col == tempCol + colEast{
                         past = true
                         break
                     }
@@ -271,7 +271,7 @@ class GamePlay{
             if isValid(row: tempRow + 1, col: tempCol + colWest){
                 var past = false
                 for (_, x) in listOfPast.enumerated(){
-                    if x.row == tempRow + 1 && x.col == tempCol{
+                    if x.row == tempRow + 1 && x.col == tempCol + colWest{
                         past = true
                         break
                     }
@@ -290,7 +290,7 @@ class GamePlay{
             if isValid(row: tempRow + 1, col: tempCol + colEast){
                 var past = false
                 for (_, x) in listOfPast.enumerated(){
-                    if x.row == tempRow + 1 && x.col == tempCol + 1{
+                    if x.row == tempRow + 1 && x.col == tempCol + colEast{
                         past = true
                         break
                     }
@@ -381,25 +381,25 @@ class GamePlay{
         }
             
         //northwest
-        else if coronaRow - 1 == 0 && coronaCol + colWest == 0 && isValid(row: coronaRow - 1, col: coronaCol + colWest) {
+        else if coronaRow - 1 == 0  && isValid(row: coronaRow - 1, col: coronaCol + colWest) {
             
             movePiece(row: coronaRow - 1, col: coronaCol + colWest)
            
            
          //northeast
-        }else if coronaRow - 1 == 0 && coronaCol + colEast == 4 && isValid(row: coronaRow - 1, col: coronaCol + colEast){
+        }else if coronaRow - 1 == 0  && isValid(row: coronaRow - 1, col: coronaCol + colEast){
             
             movePiece(row: coronaRow - 1, col: coronaCol + colEast)
             
             
             //southwest
-        }else if coronaRow + 1 == 10 && coronaCol + colWest == 10 && isValid(row: coronaRow + 1, col: coronaCol + colWest) {
+        }else if coronaRow + 1 == 10  && isValid(row: coronaRow + 1, col: coronaCol + colWest) {
             
             movePiece(row: coronaRow + 1, col: coronaCol + colWest)
             
            //southeast
         }
-        else if coronaRow + 1 == 0 && coronaCol + colEast == 4 && isValid(row: coronaRow + 1, col: coronaCol + colEast){
+        else if coronaRow + 1 == 0 && isValid(row: coronaRow + 1, col: coronaCol + colEast){
             
             movePiece(row: coronaRow + 1, col: coronaCol + colEast)
             
