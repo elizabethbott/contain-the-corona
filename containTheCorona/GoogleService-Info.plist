@@ -19,20 +19,20 @@
 	<key>STORAGE_BUCKET</key>
 	<string>contain-the-corona.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:799659358003:ios:8fcf53562ded4ea4d93046</string>
 	<key>DATABASE_URL</key>
 	<string>https://contain-the-corona.firebaseio.com</string>
 	<key>ADMOB_APP_ID</key>
-	<string>ca-app-pub-1819387077062484~7327019279</string>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
 </dict>
 </plist>

@@ -25,6 +25,8 @@ class FinalViewController: UIViewController {
     @IBOutlet weak var stayButton: UIButton!
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         design()
@@ -33,7 +35,7 @@ class FinalViewController: UIViewController {
         for (_, _) in spaceGrid.enumerated() {
             spaceGrid.popLast()
         }
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -112,7 +114,7 @@ class FinalViewController: UIViewController {
             stayButton.isHidden = false
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyboard.instantiateViewController(withIdentifier: "GameViewController")
+            let newViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
             show(newViewController, sender: self)
         }
         

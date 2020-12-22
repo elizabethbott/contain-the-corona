@@ -9,9 +9,9 @@
 import UIKit
 import os.log
 
-
+import GoogleMobileAds
 /////////////////////////////////
-
+var roundCounter = 1
 
 
 //var minMove = [spot]()
@@ -34,7 +34,7 @@ var levelCount = 1
 
 
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GADBannerViewDelegate, GADInterstitialDelegate {
     
     
     //stack views
@@ -72,6 +72,9 @@ class GameViewController: UIViewController {
    
     var disCounter = 0
     
+    var bannerView: GADBannerView!
+    var interstitial: GADInterstitial!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +105,116 @@ class GameViewController: UIViewController {
         //MusicPlayer.shared.playSoundEffect(soundEffect: "button1")
         //MusicPlayer.shared.stopBackgroundMusic()
        // play()
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        //real ad unit id  = ca-app-pub-1819387077062484/6332027027
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
+        
+        interstitial = createAndLoadInterstitial()
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
     }
     
+    func createAndLoadInterstitial() -> GADInterstitial {
+        //real id ca-app-pub-1819387077062484/8122130155
+        var interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    //
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = createAndLoadInterstitial()
+        
+        if !musicOn{
+            GSAudio.sharedInstance.playSoundMp3(soundFileName: "slowmotion")
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyboard.instantiateViewController(withIdentifier: "finalViewController")
+        show(newViewController, sender: self)
+    }
+    /// Tells the delegate an ad request succeeded.
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        print("interstitial:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that an interstitial will be presented.
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        print("interstitialWillPresentScreen")
+    }
+    
+    /// Tells the delegate the interstitial is to be animated off the screen.
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        print("interstitialWillDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app
+    /// (such as the App Store), backgrounding the current app.
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        print("interstitialWillLeaveApplication")
+    }
+    
+    
+    
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
+    }//
     
     
     func levelUp(){
@@ -213,7 +324,7 @@ class GameViewController: UIViewController {
             button.setImage(UIImage(named: "blocker"), for: .selected)
             
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: 70).isActive = true
+            button.heightAnchor.constraint(equalToConstant: 64).isActive = true
             button.widthAnchor.constraint(equalToConstant: 70).isActive = true
             spaces.append(button)
             stackView.addArrangedSubview(button)
@@ -264,6 +375,19 @@ class GameViewController: UIViewController {
                         stack10.isHidden = true
                         stack11.isHidden = true
                         
+                        //if roundCounter = 5 show intersitital ad
+                        
+                        if roundCounter == 5{
+                            GSAudio.sharedInstance.stopBackgroundMusicMp3(soundFileName: "slowmotion")
+                            if interstitial.isReady {
+                                interstitial.present(fromRootViewController: self)
+                            }
+                            
+                            roundCounter = 1
+                        }else{
+                            roundCounter += 1
+                        }
+                      
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyboard.instantiateViewController(withIdentifier: "finalViewController")
                         show(newViewController, sender: self)
@@ -282,6 +406,8 @@ class GameViewController: UIViewController {
         }//winner == false
         
     }//button tapped
+    
+    
    
     @IBAction func gameDone(_ sender: UITapGestureRecognizer) {
         

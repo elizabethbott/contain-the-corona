@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import AVFoundation
+import GoogleMobileAds
 
 
 var buttonSound = true
@@ -22,7 +23,7 @@ var currentScore = 1
 var currentHighScore = 1
 let defaults = UserDefaults.standard
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, GADBannerViewDelegate {
     //MARK: Properties
 
     @IBOutlet weak var introLabel: UILabel!
@@ -52,6 +53,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var musicCreditLabel: UILabel!
     
     @IBOutlet weak var creditDoneButton: UIButton!
+    
+    var bannerView: GADBannerView!
     
     //MARK: Functions
     
@@ -105,9 +108,72 @@ class HomeViewController: UIViewController {
         
         levelCount = 1
         // Do any additional setup after loading the view.
+        
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        //real ad unit id  = ca-app-pub-1819387077062484/6332027027
+        //CHANGE IN GOOGLESERVIE_INFO>PLIST TOO
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
     }//viewDidLoad
-
-
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+    }
+    
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+                didFailToReceiveAdWithError error: GADRequestError) {
+        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+    
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("adViewWillPresentScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewWillDismissScreen")
+    }
+    
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+        print("adViewDidDismissScreen")
+    }
+    
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+        print("adViewWillLeaveApplication")
+    }/// Tells the delegate an ad request loaded an ad.
+  
+    
+   
     @IBAction func animateStart(_ sender: UIButton) {
         if !buttonSound{
             GSAudio.sharedInstance.playSoundWav(soundFileName: "button1")

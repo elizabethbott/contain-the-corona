@@ -129,7 +129,7 @@ class TutorialViewController: UIViewController {
         
         
         for row in 0...10{
-            for col in 0...5{
+            for col in 0...4{
                 spaceGrid[row][col].isSelected = false
                 
                 
@@ -139,11 +139,11 @@ class TutorialViewController: UIViewController {
         }
         
         //NEED TO RANDOMLY PICK spots to have beginning
-        let spotsGiven = Int.random(in: 1 ... 5)
+        let spotsGiven = Int.random(in: 1 ... 4)
         
         for _ in 0..<spotsGiven{
             let row = Int.random(in: 1 ... 9)
-            let col = Int.random(in: 1 ... 4)
+            let col = Int.random(in: 1 ... 3)
             
             spaceGrid[row][col].isSelected = true
             
@@ -152,7 +152,7 @@ class TutorialViewController: UIViewController {
         //picking starting spot for the virus
         
         let row = Int.random(in: 1 ... 9)
-        let col = Int.random(in: 1 ... 4)
+        let col = Int.random(in: 1 ... 3)
         
         coronaRow = row
         coronaCol = col
@@ -193,7 +193,7 @@ class TutorialViewController: UIViewController {
     func stack(stackView: UIStackView){
         
         var spaces = [UIButton]()
-        for _ in 0..<6 {
+        for _ in 0..<5 {
             
             let button = UIButton()
             // Set the button images
@@ -202,7 +202,7 @@ class TutorialViewController: UIViewController {
             
             button.translatesAutoresizingMaskIntoConstraints = false
             button.heightAnchor.constraint(equalToConstant: 64).isActive = true
-            button.widthAnchor.constraint(equalToConstant: 64).isActive = true
+            button.widthAnchor.constraint(equalToConstant: 70).isActive = true
             spaces.append(button)
             stackView.addArrangedSubview(button)
             button.addTarget(self, action: #selector(GridControl.GridButtonTapped(button:)), for: .touchUpInside)
@@ -321,7 +321,7 @@ class TutorialViewController: UIViewController {
         tutorialCount += 1
         
         if tutorialCount == 2{
-            tutLabel1.text = "Keep placing disinfectants to contain the corona"
+            tutLabel1.text = "Keep placing masks, one at a time to contain the corona!"
             tutLabel1.isHidden = false
             okayButton1.isHidden = false
         }

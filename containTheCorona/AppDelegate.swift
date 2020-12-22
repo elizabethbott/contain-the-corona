@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //self.window?.rootViewController = HomeViewController()
         //self.window?.makeKeyAndVisible()
        // self.window?.backgroundColor = .white
+        FirebaseApp.configure()
+        
+        //TEST AD ID
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
 

@@ -1,0 +1,6 @@
+framework module Pods_containTheCorona {
+  umbrella header "Pods-containTheCorona-umbrella.h"
+
+  export *
+  module * { export * }
+}
